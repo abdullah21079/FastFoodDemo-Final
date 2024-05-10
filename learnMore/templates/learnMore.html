@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn More</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #007bff;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #666;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Style the main content area */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Add a border around the content */
+        .content {
+            border: 2px solid #007bff;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        /* Add a box shadow to the content */
+        .content {
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the link */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+         .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: blue;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Learn More</h1>
+        <p>Are you attracted to this? Now, if I have to be at the top or sell better than any other seller, then I have to maintain certain aspects such as good behavior, fresh and tasty food, mostly running fast food, etc. Another crucial aspect is maintaining the hygiene which people follow. As we maintain these aspects, people will choose us.</p>
+        <p class="quote">"Quality is not an act, it is a habit." - Aristotle</p>
+        <a href="{% url 'index1' %}" class="back-button">Back</a>
+    </div>
+</body>
+</html>

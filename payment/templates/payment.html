@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment Form</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh; /* Ensure page fills entire viewport */
+    }
+    .container {
+        border: 2px solid #000000; /* Border style */
+        padding: 20px; /* Add padding inside the container */
+        border-radius: 0px; /* Rounded corners */
+        width: 80%;
+        max-width: 600px; /* Set maximum width for better readability on larger screens */
+    }
+    .navbar {
+        background-color: #d61b1b; /* Red color */
+        width: 645px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .back-button {
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .payment-text {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .bkash-logo {
+        width: 50px;
+        height: auto;
+    }
+    .input-container {
+        display: flex;
+        flex-direction: column; /* Align input and arrow vertically */
+        align-items: center;
+        margin-top: 20px;
+    }
+    label {
+        margin-bottom: 5px; /* Add space below label */
+    }
+    input[type="text"] {
+        padding: 10px;
+        border: 1px solid #f00b0b;
+        border-radius: 5px;
+        width: 100%; /* Adjust width as needed */
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    .arrow-icon {
+        font-size: 20px; /* Adjust size as needed */
+        cursor: pointer;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #d61b1b;
+        border: 2px solid #d61b1b; /* Changed border color to red */
+        border-radius: 13px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #00568d;
+        color: #ffffff;
+    }
+    #scanner-container {
+        display: none; /* Initially hide the scanner container */
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    #scanner-video {
+        width: 300px;
+        height: 200px;
+        border: 2px solid #0070ba;
+        border-radius: 5px;
+    }
+
+    .go-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #28a745; /* Green color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        text-decoration: none; /* Remove default link underline */
+    }
+
+    /* Hover effect for the Go button */
+    .go-button:hover {
+        background-color: #218838; /* Darker shade of green on hover */
+    }
+
+    input[type="submit"] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+    /* Hover effect */
+    .styled-button:hover {
+      background-color: #0056b3; /* Darker shade of blue on hover */
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <h1 class="payment-text">Payment</h1>
+  <img src="{% static 'bkash1.png'%}" alt="Logo" class="bkash-logo">
+</div>
+
+<div class="container">
+  <form method="post">
+    {% csrf_token %}
+    <label for="name">To</label>
+    <input type="text" id="name" name="name" placeholder="Enter Marchant number or name.." required>
+
+    <label for="epin">PIN</label>
+    <input type="number" id="epin" name="epin" placeholder="Enter PIN.." required>
+    <!-- Add other input fields as needed for payment details -->
+
+    <input type="submit" value="Submit">
+    
+  </form>
+</div><br>
+
+
+</body>
+</html>

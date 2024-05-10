@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c8e6ef;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .member {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .member img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+
+        .member-details {
+            padding: 20px;
+        }
+
+        .member-details p {
+            margin: 10px 0;
+            color: #000000;
+        }
+
+        .member-details p strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Members</h1>
+
+    <div class="member">
+        <img src="{% static 'abd 1.png'%}" alt="Member 1">
+        <div class="member-details">
+            <p><strong>Name:</strong> Abdullah Al Masud</p>
+            <p><strong>Status:</strong> Web Developer</p>
+            <p><strong>Email:</strong> abd@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="member">
+        <img src="{% static 'pranto 1.png'%}" alt="Member 2">
+        <div class="member-details">
+            <p><strong>Name:</strong> Shanjid Rashid Pranto</p>
+            <p><strong>Status:</strong> Web Developer</p>
+            <p><strong>Email:</strong> pranto@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="member">
+        <img src="{% static 'asma 1.png'%}" alt="Member 3">
+        <div class="member-details">
+            <p><strong>Name:</strong> Asma Sultana</p>
+            <p><strong>Status:</strong> Web Developer</p>
+            <p><strong>Email:</strong> asma@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="member">
+        <img src="{% static 'istiak 1.png'%}" alt="Member 4">
+        <div class="member-details">
+            <p><strong>Name:</strong> Istiak Ahmed</p>
+            <p><strong>Status:</strong> Web Developer</p>
+            <p><strong>Email:</strong> istiak@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="member">
+        <img src="{% static 'ashik 1.png'%}" alt="Member 5">
+        <div class="member-details">
+            <p><strong>Name:</strong> Ashik Billah Walid</p>
+            <p><strong>Status:</strong> Web Developer</p>
+            <p><strong>Email:</strong> ashik@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>

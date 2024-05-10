@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About FastFood</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content {
+            width: 60%; /* Adjust the width as needed */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .content h1 {
+            color: #e44d26;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content li {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .image {
+            width: 35%; /* Adjust the width as needed */
+            margin-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .image img {
+            width: 100%;
+            border-radius: 8px; /* Add border radius for rounded corners */
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e44d26;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>About FastFood</h1>
+        <ul>
+            <li>Welcome to FastFood, your go-to destination for delicious and quick meals. We are dedicated to providing high-quality fast food that satisfies your cravings.</li>
+            <li>Our menu is filled with a variety of mouth-watering options, prepared with the freshest ingredients to ensure a delightful dining experience.</li>
+            <li>At FastFood, we value your time and taste buds. Enjoy our fast and friendly service as we serve up your favorite dishes with a smile.</li>
+            <li>Thank you for choosing FastFood - where good food meets great convenience!</li>
+        </ul>
+        <a href="{% url 'index1' %}" class="back-button">Back</a>
+    </div>
+    <div class="image">
+        <img src="{%static 'assets/img/aboutimg.jpg' %} " alt="FastFood Image">
+    </div>
+
+
+
+</body>
+</html>
+
